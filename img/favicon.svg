@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- 维特笔记 站标：墨色 #111111 圆角方块 + 白色「维」，与主题 --ink 同色 -->
+  <rect width="64" height="64" rx="13.8" fill="#111111"/>
+  <text x="32" y="33.4" text-anchor="middle" dominant-baseline="central" font-family="'Noto Sans SC','PingFang SC','Microsoft YaHei',sans-serif" font-weight="700" font-size="39.7" fill="#ffffff">维</text>
+</svg>

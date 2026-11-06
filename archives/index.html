@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#111111">
+
+  <title>文章归档 · 维特笔记</title>
+  <meta name="description" content="一个普通 80 后的数字自留地，记录技术、生活与一些没头没尾的念头。">
+  <meta name="author" content="维特笔记">
+  <link rel="canonical" href="https://www.weite.net">
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="alternate" type="application/atom+xml" title="维特笔记" href="/atom.xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="文章归档 · 维特笔记">
+  <meta property="og:description" content="一个普通 80 后的数字自留地，记录技术、生活与一些没头没尾的念头。">
+  <meta property="og:url" content="https://www.weite.net">
+  <meta property="og:site_name" content="维特笔记">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="文章归档 · 维特笔记">
+  <meta name="twitter:description" content="一个普通 80 后的数字自留地，记录技术、生活与一些没头没尾的念头。">
+  
+  
+  <meta property="og:image" content="https://www.weite.net/img/og-image.png">
+  
+
+  <link rel="stylesheet" href="/css/style.css?v=8c38ae3d">
+
+  
+  
+  
+  <link rel="preconnect" href="https://img.weite.net" crossorigin>
+  
+  <link rel="preconnect" href="https://img.vte.cc" crossorigin>
+  
+  
+<meta name="generator" content="Hexo 8.1.2"></head>
+<body class="is-inner">
+
+
+<header class="site-header" id="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="/" aria-label="维特笔记">
+      <span class="brand-mark">维</span>
+      <span class="brand-text">
+        <strong>维特笔记</strong>
+        <em>记录 · 思考 · 折腾</em>
+      </span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="主导航">
+      
+        <a class="nav-link" href="/">首页</a>
+      
+        <a class="nav-link is-active" href="/archives/">文章</a>
+      
+        <a class="nav-link" href="/portfolio/">作品</a>
+      
+        <a class="nav-link" href="/services/">服务</a>
+      
+        <a class="nav-link" href="/friends/">友链</a>
+      
+        <a class="nav-link" href="/about/">关于</a>
+      
+        <a class="nav-link" href="/contact/">联系</a>
+      
+    </nav>
+
+    <div class="header-actions">
+      
+      <button class="icon-btn js-search-open" type="button" aria-label="搜索">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path></svg>
+      </button>
+      
+      <button class="menu-toggle" type="button" aria-label="打开菜单" aria-expanded="false" id="menu-toggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+  <div class="mobile-nav-inner">
+    <nav>
+      
+        <a class="" href="/"><span>首页</span><i>→</i></a>
+      
+        <a class="is-active" href="/archives/"><span>文章</span><i>→</i></a>
+      
+        <a class="" href="/portfolio/"><span>作品</span><i>→</i></a>
+      
+        <a class="" href="/services/"><span>服务</span><i>→</i></a>
+      
+        <a class="" href="/friends/"><span>友链</span><i>→</i></a>
+      
+        <a class="" href="/about/"><span>关于</span><i>→</i></a>
+      
+        <a class="" href="/contact/"><span>联系</span><i>→</i></a>
+      
+    </nav>
+    <div class="mobile-nav-foot">
+      
+        <a href="https://github.com/weitenet" target="_blank" rel="noopener">GitHub</a>
+      
+        <a href="mailto:weite.net@outlook.com" target="_blank" rel="noopener">邮箱</a>
+      
+        <a href="/atom.xml" target="_blank" rel="noopener">RSS</a>
+      
+    </div>
+  </div>
+</div>
+
+<div class="search-layer" id="search-layer" aria-hidden="true">
+  <div class="search-layer-inner">
+    <button class="search-close js-search-close" type="button" aria-label="关闭搜索">×</button>
+    <p class="search-hint">输入关键词，搜索站内文章</p>
+    <div class="search-box">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path></svg>
+      <input type="search" id="search-layer-input" placeholder="例如：Hexo、生活、AI" autocomplete="off">
+    </div>
+    <div class="search-results" id="search-layer-results"></div>
+  </div>
+</div>
+
+
+
+<section class="page-hero">
+  <div class="page-hero-shape" aria-hidden="true"></div>
+  <div class="shell">
+    <p class="page-hero-kicker">ARCHIVE</p>
+    <h1 class="page-hero-title">文章归档</h1>
+    
+    <p class="page-hero-sub">一共 30 篇记录，约 23 千字。</p>
+    
+    <nav class="page-hero-crumbs" aria-label="面包屑">
+      
+        
+        
+          <a href="/">首页</a>
+        
+      
+        <span>/</span>
+        
+          <em>归档</em>
+        
+      
+    </nav>
+  </div>
+</section>
+
+
+<main class="section">
+  <div class="shell archive-wrap">
+    <div class="archive-side">
+      <p class="archive-side-title">按年份</p>
+      <ul class="archive-years">
+        
+        <li><a href="#year-2026"><span>2026</span><em>19</em></a></li>
+        
+        <li><a href="#year-2025"><span>2025</span><em>11</em></a></li>
+        
+      </ul>
+      <div class="archive-tip">
+        <p>共 30 篇文章</p>
+        <a class="link-arrow" href="/categories/">按分类浏览<i>→</i></a>
+        <a class="link-arrow" href="/tags/">按标签浏览<i>→</i></a>
+      </div>
+    </div>
+
+    <div class="archive-main">
+      
+      <section class="archive-year" id="year-2026">
+        <h2 class="archive-year-title">2026<span>19 篇</span></h2>
+        <ul class="archive-list">
+          
+          <li>
+            <time>11-04</time>
+            <div class="archive-item-main">
+              <a href="/natter/28/">聊聊我最近做了什么</a>
+              <span class="archive-cat">natter</span>
+            </div>
+            <span class="archive-read">6 min</span>
+          </li>
+          
+          <li>
+            <time>10-25</time>
+            <div class="archive-item-main">
+              <a href="/natter/27/">喝酒后的胡言乱语</a>
+              <span class="archive-cat">natter</span>
+            </div>
+            <span class="archive-read">3 min</span>
+          </li>
+          
+          <li>
+            <time>10-19</time>
+            <div class="archive-item-main">
+              <a href="/natter/26/">使用WorkBuddy写hexo主题确实比较安逸</a>
+              <span class="archive-cat">natter</span>
+            </div>
+            <span class="archive-read">2 min</span>
+          </li>
+          
+          <li>
+            <time>10-14</time>
+            <div class="archive-item-main">
+              <a href="/vitepress/25/">用豆包给我电脑里安装了一个VitePress</a>
+              <span class="archive-cat">vitepress</span>
+            </div>
+            <span class="archive-read">2 min</span>
+          </li>
+          
+          <li>
+            <time>10-11</time>
+            <div class="archive-item-main">
+              <a href="/natter/24/">记录电脑重做系统后迁移hexo数据的记录</a>
+              <span class="archive-cat">natter</span>
+            </div>
+            <span class="archive-read">4 min</span>
+          </li>
+          
+          <li>
+            <time>10-08</time>
+            <div class="archive-item-main">
+              <a href="/natter/23/">趁着这个假期好好的捣鼓了一下我这个小破站</a>
+              <span class="archive-cat">natter</span>
+            </div>
+            <span class="archive-read">4 min</span>
+          </li>
+          
+          <li>
+            <time>09-28</time>
+            <div class="archive-item-main">
+              <a href="/natter/22/">一个中年老蹬琢磨下载自己喜欢音乐的办法</a>
+              <span class="archive-cat">natter</span>
+            </div>
+            <span class="archive-read">5 min</span>
+          </li>
+          
+          <li>
+            <time>09-25</time>
+            <div class="archive-item-main">
+              <a href="/natter/21/">中秋佳节快乐</a>
+              <span class="archive-cat">natter</span>
+            </div>
+            <span class="archive-read">2 min</span>
+          </li>
+          
+          <li>
+            <time>09-14</time>
+            <div class="archive-item-main">
+              <a href="/natter/20/">小破站一周年了</a>
+              <span class="archive-cat">natter</span>
+            </div>
+            <span class="archive-read">6 min</span>
+          </li>
+          
+          <li>
+            <time>09-01</time>
+            <div class="archive-item-main">
+              <a href="/natter/19/">给我这个小破站换个域名</a>
+              <span class="archive-cat">natter</span>
+            </div>
+            <span class="archive-read">2 min</span>
+          </li>
+          
+          <li>
+            <time>08-22</time>
+            <div class="archive-item-main">
+              <a href="/natter/18/">好不容易看上一个域名结果被抢注了</a>
+              <span class="archive-cat">natter</span>
+            </div>
+            <span class="archive-read">1 min</span>
+          </li>
+          
+          <li>
+            <time>08-12</time>
+            <div class="archive-item-main">
+              <a href="/natter/17/">给小破站加速之乱七八糟的方法</a>
+              <span class="archive-cat">natter</span>
+            </div>
+            <span class="archive-read">3 min</span>
+          </li>
+          
+          <li>
+            <time>08-07</time>
+            <div class="archive-item-main">
+              <a href="/natter/16/">给我的小破站除除草</a>
+              <span class="archive-cat">natter</span>
+            </div>
+            <span class="archive-read">2 min</span>
+          </li>
+          
+          <li>
+            <time>04-24</time>
+            <div class="archive-item-main">
+              <a href="/natter/15/">科技改变生活这话不假</a>
+              <span class="archive-cat">natter</span>
+            </div>
+            <span class="archive-read">3 min</span>
+          </li>
+          
+          <li>
+            <time>04-01</time>
+            <div class="archive-item-main">
+              <a href="/natter/14/">为情绪买单之入手一个简短的单拼域名</a>
+              <span class="archive-cat">natter</span>
+            </div>
+            <span class="archive-read">2 min</span>
+          </li>
+          
+          <li>
+            <time>03-11</time>
+            <div class="archive-item-main">
+              <a href="/natter/13/">这个春节去了一趟山东看了一场烟花秀</a>
+              <span class="archive-cat">natter</span>
+            </div>
+            <span class="archive-read">2 min</span>
+          </li>
+          
+          <li>
+            <time>01-21</time>
+            <div class="archive-item-main">
+              <a href="/natter/12/">不备案部署在GitHub的博客是否需要EdgeOne加速</a>
+              <span class="archive-cat">natter</span>
+            </div>
+            <span class="archive-read">4 min</span>
+          </li>
+          
+          <li>
+            <time>01-15</time>
+            <div class="archive-item-main">
+              <a href="/vitepress/11/">学习一下vitepress的使用</a>
+              <span class="archive-cat">vitepress</span>
+            </div>
+            <span class="archive-read">2 min</span>
+          </li>
+          
+          <li>
+            <time>01-13</time>
+            <div class="archive-item-main">
+              <a href="/natter/10/">邯郸博物馆一日游</a>
+              <span class="archive-cat">natter</span>
+            </div>
+            <span class="archive-read">4 min</span>
+          </li>
+          
+        </ul>
+      </section>
+      
+      <section class="archive-year" id="year-2025">
+        <h2 class="archive-year-title">2025<span>11 篇</span></h2>
+        <ul class="archive-list">
+          
+          <li>
+            <time>12-29</time>
+            <div class="archive-item-main">
+              <a href="/natter/9/">咱也来个年终总结</a>
+              <span class="archive-cat">natter</span>
+            </div>
+            <span class="archive-read">3 min</span>
+          </li>
+          
+          <li>
+            <time>12-22</time>
+            <div class="archive-item-main">
+              <a href="/natter/8/">优化博客之增加一个摄影页面</a>
+              <span class="archive-cat">natter</span>
+            </div>
+            <span class="archive-read">5 min</span>
+          </li>
+          
+          <li>
+            <time>12-18</time>
+            <div class="archive-item-main">
+              <a href="/natter/7/">冬天还真不适合在山里自驾</a>
+              <span class="archive-cat">natter</span>
+            </div>
+            <span class="archive-read">1 min</span>
+          </li>
+          
+          <li>
+            <time>12-03</time>
+            <div class="archive-item-main">
+              <a href="/natter/6/">又换hexo主题了</a>
+              <span class="archive-cat">natter</span>
+            </div>
+            <span class="archive-read">2 min</span>
+          </li>
+          
+          <li>
+            <time>11-14</time>
+            <div class="archive-item-main">
+              <a href="/natter/5/">这才是真正的女装大佬</a>
+              <span class="archive-cat">natter</span>
+            </div>
+            <span class="archive-read">1 min</span>
+          </li>
+          
+          <li>
+            <time>11-03</time>
+            <div class="archive-item-main">
+              <a href="/natter/4/">优化我的hexo主题之增加了分类和404错误页面</a>
+              <span class="archive-cat">natter</span>
+            </div>
+            <span class="archive-read">6 min</span>
+          </li>
+          
+          <li>
+            <time>10-29</time>
+            <div class="archive-item-main">
+              <a href="/natter/3/">我用AI给自己写了一个hexo主题</a>
+              <span class="archive-cat">natter</span>
+            </div>
+            <span class="archive-read">2 min</span>
+          </li>
+          
+          <li>
+            <time>10-20</time>
+            <div class="archive-item-main">
+              <a href="/natter/2/">我的图床解决方案</a>
+              <span class="archive-cat">natter</span>
+            </div>
+            <span class="archive-read">2 min</span>
+          </li>
+          
+          <li>
+            <time>10-14</time>
+            <div class="archive-item-main">
+              <a href="/natter/ai/">AI工具确实牛逼</a>
+              <span class="archive-cat">natter</span>
+            </div>
+            <span class="archive-read">10 min</span>
+          </li>
+          
+          <li>
+            <time>10-09</time>
+            <div class="archive-item-main">
+              <a href="/natter/1/">hexo写文章用到的代码记录</a>
+              <span class="archive-cat">natter</span>
+            </div>
+            <span class="archive-read">2 min</span>
+          </li>
+          
+          <li>
+            <time>09-18</time>
+            <div class="archive-item-main">
+              <a href="/natter/hello/">hello我来了</a>
+              <span class="archive-cat">natter</span>
+            </div>
+            <span class="archive-read">1 min</span>
+          </li>
+          
+        </ul>
+      </section>
+      
+    </div>
+  </div>
+</main>
+
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="footer-logo" href="/">
+          <span class="brand-mark">维</span>
+          <span>维特笔记</span>
+        </a>
+        <p class="footer-desc">一个普通 80 后的数字自留地，记录技术、生活与一些没头没尾的念头。</p>
+        <div class="footer-social">
+          
+          <a href="https://github.com/weitenet" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.17c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+          </a>
+          
+          <a href="mailto:weite.net@outlook.com" target="_blank" rel="noopener" aria-label="邮箱">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm10 7.6L3.6 5.4 3 6l9 7 9-7-.6-.6L12 11.6z"/></svg>
+          </a>
+          
+          <a href="/atom.xml" target="_blank" rel="noopener" aria-label="RSS">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17a3 3 0 1 1 0 6 3 3 0 0 1 0-6zM1 8.6v3.1A11.3 11.3 0 0 1 12.3 23h3.1C15.4 14.6 9.4 8.6 1 8.6zM1 1v3.1C11.3 4.1 19.9 12.7 19.9 23H23C23 10.6 13.4 1 1 1z"/></svg>
+          </a>
+          
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>导航</h4>
+        <ul>
+          
+          <li><a href="/">首页</a></li>
+          
+          <li><a href="/archives/">文章</a></li>
+          
+          <li><a href="/portfolio/">作品</a></li>
+          
+          <li><a href="/services/">服务</a></li>
+          
+          <li><a href="/friends/">友链</a></li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>浏览</h4>
+        <ul>
+          <li><a href="/archives/">文章归档</a></li>
+          <li><a href="/categories/">全部分类</a></li>
+          <li><a href="/tags/">全部标签</a></li>
+          <li><a href="/search/">搜索文章</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>保持联系</h4>
+        <ul>
+          <li><a href="/contact/">写封邮件</a></li>
+          
+          <li><a href="/atom.xml" target="_blank" rel="noopener">RSS</a></li>
+          
+          <li><a href="/sitemap.xml" target="_blank" rel="noopener">站点地图</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025–2026 维特笔记. 保留所有权利。</p>
+      <p class="footer-meta">
+        
+        <span>由 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> 驱动</span>
+        <span class="dot">·</span>
+        <span>主题 Smarto</span>
+        
+        <span class="dot">·</span>
+        <a href="https://cloud.umami.is/analytics/us/share/XcqjHL9GTSU4ZtBl" target="_blank" rel="noopener">访问统计</a>
+        
+      </p>
+    </div>
+  </div>
+</footer>
+
+<button class="back-top" id="back-top" type="button" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"></path></svg>
+</button>
+
+<div class="read-progress" id="read-progress"></div>
+
+<script>window.__ROOT__ = '/';</script>
+
+
+<script defer src="https://cloud.umami.is/script.js" data-website-id="cb9e51cb-83df-4277-b9ec-7bb1b8359e6b"></script>
+
+<script src="/js/main.js?v=1e6a76d1" defer></script>
+
+<script type="speculationrules">
+{"prerender":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}
+</script>
+
+</body>
+</html>
+

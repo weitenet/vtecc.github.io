@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#111111">
+
+  <title>hexo写文章用到的代码记录 · 维特笔记</title>
+  <meta name="description" content="咱这个小破站搭建成功了，现在记录一下以后要用到的代码，免得到时候翻箱倒柜的找。 因为这个写作是需要用Markdown语法格式写，所以把常用的到东西在这记录一下。 超链接1这是一个链接 [维特笔记](https://vte.cc) 渲染结果 这是一个链接 维特笔记 图片插入插入图片Markdown语法">
+  <meta name="author" content="维特笔记">
+  <link rel="canonical" href="https://www.weite.net/natter/1/">
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="alternate" type="application/atom+xml" title="维特笔记" href="/atom.xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="hexo写文章用到的代码记录 · 维特笔记">
+  <meta property="og:description" content="咱这个小破站搭建成功了，现在记录一下以后要用到的代码，免得到时候翻箱倒柜的找。 因为这个写作是需要用Markdown语法格式写，所以把常用的到东西在这记录一下。 超链接1这是一个链接 [维特笔记](https://vte.cc) 渲染结果 这是一个链接 维特笔记 图片插入插入图片Markdown语法">
+  <meta property="og:url" content="https://www.weite.net/natter/1/">
+  <meta property="og:site_name" content="维特笔记">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="hexo写文章用到的代码记录 · 维特笔记">
+  <meta name="twitter:description" content="咱这个小破站搭建成功了，现在记录一下以后要用到的代码，免得到时候翻箱倒柜的找。 因为这个写作是需要用Markdown语法格式写，所以把常用的到东西在这记录一下。 超链接1这是一个链接 [维特笔记](https://vte.cc) 渲染结果 这是一个链接 维特笔记 图片插入插入图片Markdown语法">
+  
+  
+  <meta property="og:image" content="https://www.weite.net/img/og-image.png">
+  
+
+  <link rel="stylesheet" href="/css/style.css?v=8c38ae3d">
+
+  
+  
+  
+  <link rel="preconnect" href="https://img.weite.net" crossorigin>
+  
+  <link rel="preconnect" href="https://img.vte.cc" crossorigin>
+  
+  <link rel="preconnect" href="https://waline.weite.net" crossorigin>
+  
+  
+<meta name="generator" content="Hexo 8.1.2"></head>
+<body class="is-inner">
+
+
+<header class="site-header" id="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="/" aria-label="维特笔记">
+      <span class="brand-mark">维</span>
+      <span class="brand-text">
+        <strong>维特笔记</strong>
+        <em>记录 · 思考 · 折腾</em>
+      </span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="主导航">
+      
+        <a class="nav-link" href="/">首页</a>
+      
+        <a class="nav-link" href="/archives/">文章</a>
+      
+        <a class="nav-link" href="/portfolio/">作品</a>
+      
+        <a class="nav-link" href="/services/">服务</a>
+      
+        <a class="nav-link" href="/friends/">友链</a>
+      
+        <a class="nav-link" href="/about/">关于</a>
+      
+        <a class="nav-link" href="/contact/">联系</a>
+      
+    </nav>
+
+    <div class="header-actions">
+      
+      <button class="icon-btn js-search-open" type="button" aria-label="搜索">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path></svg>
+      </button>
+      
+      <button class="menu-toggle" type="button" aria-label="打开菜单" aria-expanded="false" id="menu-toggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+  <div class="mobile-nav-inner">
+    <nav>
+      
+        <a class="" href="/"><span>首页</span><i>→</i></a>
+      
+        <a class="" href="/archives/"><span>文章</span><i>→</i></a>
+      
+        <a class="" href="/portfolio/"><span>作品</span><i>→</i></a>
+      
+        <a class="" href="/services/"><span>服务</span><i>→</i></a>
+      
+        <a class="" href="/friends/"><span>友链</span><i>→</i></a>
+      
+        <a class="" href="/about/"><span>关于</span><i>→</i></a>
+      
+        <a class="" href="/contact/"><span>联系</span><i>→</i></a>
+      
+    </nav>
+    <div class="mobile-nav-foot">
+      
+        <a href="https://github.com/weitenet" target="_blank" rel="noopener">GitHub</a>
+      
+        <a href="mailto:weite.net@outlook.com" target="_blank" rel="noopener">邮箱</a>
+      
+        <a href="/atom.xml" target="_blank" rel="noopener">RSS</a>
+      
+    </div>
+  </div>
+</div>
+
+<div class="search-layer" id="search-layer" aria-hidden="true">
+  <div class="search-layer-inner">
+    <button class="search-close js-search-close" type="button" aria-label="关闭搜索">×</button>
+    <p class="search-hint">输入关键词，搜索站内文章</p>
+    <div class="search-box">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path></svg>
+      <input type="search" id="search-layer-input" placeholder="例如：Hexo、生活、AI" autocomplete="off">
+    </div>
+    <div class="search-results" id="search-layer-results"></div>
+  </div>
+</div>
+
+
+
+
+<section class="article-hero">
+  <div class="shell">
+    <nav class="crumbs" aria-label="面包屑">
+      <a href="/">首页</a>
+      <span>/</span>
+      
+      <a href="/categories/natter/">natter</a>
+      <span>/</span>
+      
+      <em>正文</em>
+    </nav>
+    <h1 class="article-title">hexo写文章用到的代码记录</h1>
+    <div class="article-meta">
+      <time datetime="2025-10-09T02:45:28.000Z">2025年10月09日</time>
+      <span class="dot">·</span>
+      <span>2 分钟阅读</span>
+      <span class="dot">·</span>
+      <span>318 字</span>
+      
+      <span class="dot">·</span>
+      <span>更新于 2026-11-06</span>
+      
+    </div>
+  </div>
+</section>
+
+<article class="section article-section">
+  <div class="shell article-layout">
+    <div class="article-main">
+      
+
+      <div class="article-content" id="article-content">
+        <p>咱这个小破站搭建成功了，现在记录一下以后要用到的代码，免得到时候翻箱倒柜的找。</p>
+<p>因为这个写作是需要用Markdown语法格式写，所以把常用的到东西在这记录一下。</p>
+<h2 id="超链接"><a href="#超链接" class="headerlink" title="超链接"></a>超链接</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">这是一个链接 [维特笔记](https://vte.cc)<br></code></pre></td></tr></table></figure>
+<p>渲染结果</p>
+<p>这是一个链接 <a target="_blank" rel="noopener" href="https://vte.cc/">维特笔记</a></p>
+<h2 id="图片插入"><a href="#图片插入" class="headerlink" title="图片插入"></a>图片插入</h2><p>插入图片Markdown语法代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">![图片alt](图片链接 <span class="hljs-string">&quot;图片title&quot;</span>)<br></code></pre></td></tr></table></figure>
+
+<p>对应的HTML代码：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">&lt;img <br> src=<span class="hljs-string">&quot;图片链接&quot;</span> alt=<span class="hljs-string">&quot;图片alt&quot;</span> title=<span class="hljs-string">&quot;图片title&quot;</span><br>&gt;<br></code></pre></td></tr></table></figure>
+
+<h2 id="引用块"><a href="#引用块" class="headerlink" title="引用块"></a>引用块</h2><h3 id="引用书上的句子"><a href="#引用书上的句子" class="headerlink" title="引用书上的句子"></a>引用书上的句子</h3><blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p>
+<footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote>
+
+<h3 id="引用网络上的文章"><a href="#引用网络上的文章" class="headerlink" title="引用网络上的文章"></a>引用网络上的文章</h3><blockquote><p>Every interaction is both precious and an opportunity to delight.</p>
+<footer><strong>Seth Godin</strong><cite><a target="_blank" rel="noopener" href="http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html">Welcome to Island Marketing</a></cite></footer></blockquote>
+
+<h2 id="视频插入"><a href="#视频插入" class="headerlink" title="视频插入"></a>视频插入</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">&lt;iframe src=<span class="hljs-string">&quot; //player.bilibili.com/player.html?isOutside=true&amp;aid=115252595267797&amp;bvid=BV1G6JCzCE21&amp;cid=32575260409&amp;p=1&amp;as_wide=1&amp;high_quality=1&amp;danmaku=0&quot;</span> style=<span class="hljs-string">&quot;width: 100%; aspect-ratio: 16 / 9; border: none;&quot;</span> allowfullscreen&gt; &lt;/iframe&gt;<br></code></pre></td></tr></table></figure>
+
+
+<iframe src=" //player.bilibili.com/player.html?isOutside=true&aid=115252595267797&bvid=BV1G6JCzCE21&cid=32575260409&p=1&as_wide=1&high_quality=1&danmaku=0" style="width: 100%; aspect-ratio: 16 / 9; border: none;" allowfullscreen> </iframe>
+
+
+<h2 id="音乐插入"><a href="#音乐插入" class="headerlink" title="音乐插入"></a>音乐插入</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">&lt;audio controls&gt;<br>  &lt;<span class="hljs-built_in">source</span> src=<span class="hljs-string">&quot;你的mp3地址&quot;</span> <span class="hljs-built_in">type</span>=<span class="hljs-string">&quot;audio/mpeg&quot;</span>&gt;<br>  您的浏览器不支持 audio 元素。<br>&lt;/audio&gt;<br></code></pre></td></tr></table></figure>
+
+<audio controls>
+  <source src="https://wasmer.vte.cc/wp-content/uploads/2025/10/video_a__Ba__-Mine-Ba__-Mi._0.mp3" type="audio/mpeg">
+  您的浏览器不支持 audio 元素。
+</audio>
+
+<p>一般来说自己编写也就这几样，其他的好像没有。</p>
+
+      </div>
+
+      
+      <div class="article-tags">
+        <span class="label">标签</span>
+        
+        <a href="/tags/%E5%8D%9A%E5%AE%A2/"># 博客</a>
+        
+        <a href="/tags/hexo/"># hexo</a>
+        
+      </div>
+      
+
+      
+      <div class="copyright-box">
+        <p><strong>版权声明</strong>：本文采用
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">BY-NC-SA 4.0</a>
+          许可协议，转载请注明来自 <a href="/">维特笔记</a>。
+        </p>
+      </div>
+      
+
+      
+      <div class="share-row">
+        <span class="label">分享</span>
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fwww.weite.net%2Fnatter%2F1%2F&title=hexo%E5%86%99%E6%96%87%E7%AB%A0%E7%94%A8%E5%88%B0%E7%9A%84%E4%BB%A3%E7%A0%81%E8%AE%B0%E5%BD%95" target="_blank" rel="noopener">微博</a>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.weite.net%2Fnatter%2F1%2F&text=hexo%E5%86%99%E6%96%87%E7%AB%A0%E7%94%A8%E5%88%B0%E7%9A%84%E4%BB%A3%E7%A0%81%E8%AE%B0%E5%BD%95" target="_blank" rel="noopener">X</a>
+        <button type="button" class="js-copy-link" data-url="https://www.weite.net/natter/1/">复制链接</button>
+      </div>
+      
+
+      
+      <div class="author-box">
+        <img src="/img/avatar.svg" alt="维特笔记" loading="lazy" decoding="async">
+        <div>
+          <h3>维特笔记</h3>
+          <p>一个做事三分钟热度、却把博客坚持了一年的人。</p>
+          <div class="author-links">
+            <a href="/about/">关于我</a>
+            <a href="/archives/">全部文章</a>
+          </div>
+        </div>
+      </div>
+      
+
+      <nav class="post-nav">
+        
+        <a class="post-nav-item prev" href="/natter/ai/">
+          <span>← 上一篇</span>
+          <strong>AI工具确实牛逼</strong>
+        </a>
+        
+
+        
+        <a class="post-nav-item next" href="/natter/hello/">
+          <span>下一篇 →</span>
+          <strong>hello我来了</strong>
+        </a>
+        
+      </nav>
+
+      
+      
+<section class="comments-area" id="comments">
+  <div class="section-line-head">
+    <h2>评论</h2>
+    <p>说点什么，让我知道你来过</p>
+  </div>
+  <div id="waline-container" class="waline-container"></div>
+</section>
+<script>
+(function () {
+  var box = document.getElementById('waline-container');
+  if (!box) return;
+  var loaded = false;
+  function loadWaline() {
+    if (loaded) return;
+    loaded = true;
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = '/waline/waline.css?v=0033abb4';
+    document.head.appendChild(link);
+    var s = document.createElement('script');
+    s.type = 'module';
+    s.textContent = [
+      "import * as Waline from '/waline/waline.js?v=88d7da73';",
+      "Waline.init({",
+      "  el: '#waline-container',",
+      "  serverURL: 'https://waline.weite.net',",
+      "  lang: 'zh-CN',",
+      "  placeholder: '说点什么吧，欢迎交流…',",
+      "  requiredMeta: [\"nick\",\"mail\"], ",
+      "  login: 'enable',",
+      "  pageSize: 10,",
+      "  pageview: false,",
+      "  comment: true,",
+      "  dark: false,",
+      "  search: false",
+      "});"
+    ].join('\n');
+    document.body.appendChild(s);
+  }
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { io.unobserve(e.target); loadWaline(); }
+      });
+    }, { rootMargin: '200px' });
+    io.observe(box);
+  } else {
+    loadWaline();
+  }
+})();
+</script>
+
+
+      
+    </div>
+
+    <aside class="article-side">
+      
+      <div class="side-block toc-block">
+        <h4 class="side-title">目录</h4>
+        <div class="toc" id="toc"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B6%85%E9%93%BE%E6%8E%A5"><span class="toc-text">超链接</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%BE%E7%89%87%E6%8F%92%E5%85%A5"><span class="toc-text">图片插入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%95%E7%94%A8%E5%9D%97"><span class="toc-text">引用块</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E7%94%A8%E4%B9%A6%E4%B8%8A%E7%9A%84%E5%8F%A5%E5%AD%90"><span class="toc-text">引用书上的句子</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%95%E7%94%A8%E7%BD%91%E7%BB%9C%E4%B8%8A%E7%9A%84%E6%96%87%E7%AB%A0"><span class="toc-text">引用网络上的文章</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%86%E9%A2%91%E6%8F%92%E5%85%A5"><span class="toc-text">视频插入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%9F%B3%E4%B9%90%E6%8F%92%E5%85%A5"><span class="toc-text">音乐插入</span></a></li></ol></div>
+      </div>
+      
+
+      <div class="side-block side-author">
+        <img src="/img/avatar.svg" alt="维特笔记" loading="lazy" decoding="async">
+        <h4>维特笔记</h4>
+        <p>一个做事三分钟热度、却把博客坚持了一年的人。</p>
+        <div class="side-social">
+          
+          <a href="https://github.com/weitenet" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.17c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+          </a>
+          
+          <a href="mailto:weite.net@outlook.com" target="_blank" rel="noopener" aria-label="邮箱">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm10 7.6L3.6 5.4 3 6l9 7 9-7-.6-.6L12 11.6z"/></svg>
+          </a>
+          
+          <a href="/atom.xml" target="_blank" rel="noopener" aria-label="RSS">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17a3 3 0 1 1 0 6 3 3 0 0 1 0-6zM1 8.6v3.1A11.3 11.3 0 0 1 12.3 23h3.1C15.4 14.6 9.4 8.6 1 8.6zM1 1v3.1C11.3 4.1 19.9 12.7 19.9 23H23C23 10.6 13.4 1 1 1z"/></svg>
+          </a>
+          
+        </div>
+      </div>
+
+      
+      <div class="side-block">
+        <h4 class="side-title">最近文章</h4>
+        <ul class="side-posts">
+          
+          <li>
+            <a href="/natter/28/">聊聊我最近做了什么</a>
+            <time>2026-11-04</time>
+          </li>
+          
+          <li>
+            <a href="/natter/27/">喝酒后的胡言乱语</a>
+            <time>2026-10-25</time>
+          </li>
+          
+          <li>
+            <a href="/natter/26/">使用WorkBuddy写hexo主题确实比较安逸</a>
+            <time>2026-10-19</time>
+          </li>
+          
+          <li>
+            <a href="/vitepress/25/">用豆包给我电脑里安装了一个VitePress</a>
+            <time>2026-10-14</time>
+          </li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <div class="side-block">
+        <h4 class="side-title">分类</h4>
+        <ul class="side-cats">
+          
+          <li><a href="/categories/natter/"><span>natter</span><em></em></a></li>
+          
+          <li><a href="/categories/vitepress/"><span>vitepress</span><em></em></a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <div class="side-block">
+        <h4 class="side-title">标签</h4>
+        <div class="side-tags">
+          
+          <a href="/tags/%E9%82%AF%E9%83%B8%E5%8D%9A%E7%89%A9%E9%A6%86/">邯郸博物馆</a>
+          
+          <a href="/tags/EdgeOne/">EdgeOne</a>
+          
+          <a href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a>
+          
+          <a href="/tags/hexo/">hexo</a>
+          
+          <a href="/tags/%E7%83%9F%E8%8A%B1/">烟花</a>
+          
+          <a href="/tags/%E8%87%AA%E9%A9%BE/">自驾</a>
+          
+          <a href="/tags/vitepress/">vitepress</a>
+          
+          <a href="/tags/%E5%B0%8F%E7%A0%B4%E7%AB%99/">小破站</a>
+          
+          <a href="/tags/%E8%B1%86%E5%8C%85/">豆包</a>
+          
+          <a href="/tags/hexo%E4%B8%BB%E9%A2%98/">hexo主题</a>
+          
+          <a href="/tags/vercel/">vercel</a>
+          
+          <a href="/tags/%E5%9F%9F%E5%90%8D/">域名</a>
+          
+          <a href="/tags/%E5%9B%BE%E5%BA%8A/">图床</a>
+          
+          <a href="/tags/%E9%9F%B3%E4%B9%90/">音乐</a>
+          
+        </div>
+      </div>
+      
+    </aside>
+  </div>
+</article>
+
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="footer-logo" href="/">
+          <span class="brand-mark">维</span>
+          <span>维特笔记</span>
+        </a>
+        <p class="footer-desc">一个普通 80 后的数字自留地，记录技术、生活与一些没头没尾的念头。</p>
+        <div class="footer-social">
+          
+          <a href="https://github.com/weitenet" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.17c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+          </a>
+          
+          <a href="mailto:weite.net@outlook.com" target="_blank" rel="noopener" aria-label="邮箱">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm10 7.6L3.6 5.4 3 6l9 7 9-7-.6-.6L12 11.6z"/></svg>
+          </a>
+          
+          <a href="/atom.xml" target="_blank" rel="noopener" aria-label="RSS">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17a3 3 0 1 1 0 6 3 3 0 0 1 0-6zM1 8.6v3.1A11.3 11.3 0 0 1 12.3 23h3.1C15.4 14.6 9.4 8.6 1 8.6zM1 1v3.1C11.3 4.1 19.9 12.7 19.9 23H23C23 10.6 13.4 1 1 1z"/></svg>
+          </a>
+          
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>导航</h4>
+        <ul>
+          
+          <li><a href="/">首页</a></li>
+          
+          <li><a href="/archives/">文章</a></li>
+          
+          <li><a href="/portfolio/">作品</a></li>
+          
+          <li><a href="/services/">服务</a></li>
+          
+          <li><a href="/friends/">友链</a></li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>浏览</h4>
+        <ul>
+          <li><a href="/archives/">文章归档</a></li>
+          <li><a href="/categories/">全部分类</a></li>
+          <li><a href="/tags/">全部标签</a></li>
+          <li><a href="/search/">搜索文章</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>保持联系</h4>
+        <ul>
+          <li><a href="/contact/">写封邮件</a></li>
+          
+          <li><a href="/atom.xml" target="_blank" rel="noopener">RSS</a></li>
+          
+          <li><a href="/sitemap.xml" target="_blank" rel="noopener">站点地图</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025–2026 维特笔记. 保留所有权利。</p>
+      <p class="footer-meta">
+        
+        <span>由 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> 驱动</span>
+        <span class="dot">·</span>
+        <span>主题 Smarto</span>
+        
+        <span class="dot">·</span>
+        <a href="https://cloud.umami.is/analytics/us/share/XcqjHL9GTSU4ZtBl" target="_blank" rel="noopener">访问统计</a>
+        
+      </p>
+    </div>
+  </div>
+</footer>
+
+<button class="back-top" id="back-top" type="button" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"></path></svg>
+</button>
+
+<div class="read-progress" id="read-progress"></div>
+
+<script>window.__ROOT__ = '/';</script>
+
+
+<script defer src="https://cloud.umami.is/script.js" data-website-id="cb9e51cb-83df-4277-b9ec-7bb1b8359e6b"></script>
+
+<script src="/js/main.js?v=1e6a76d1" defer></script>
+
+<script type="speculationrules">
+{"prerender":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}
+</script>
+
+</body>
+</html>
+

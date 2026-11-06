@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme-color" content="#111111">
+
+  <title>优化我的hexo主题之增加了分类和404错误页面 · 维特笔记</title>
+  <meta name="description" content="按照上次的使用AI工具的经验，这次给自己这个小破站增加了两个页面，分别是：分类页面和404错误页面。 一、添加分类页面（Categories） 创建分类页面文件 在 source 文件夹下创建 categories 文件夹，新建 index.md：文件路径：source&amp;#x2F;categorie">
+  <meta name="author" content="维特笔记">
+  <link rel="canonical" href="https://www.weite.net/natter/4/">
+  <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+  <link rel="alternate" type="application/atom+xml" title="维特笔记" href="/atom.xml">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="优化我的hexo主题之增加了分类和404错误页面 · 维特笔记">
+  <meta property="og:description" content="按照上次的使用AI工具的经验，这次给自己这个小破站增加了两个页面，分别是：分类页面和404错误页面。 一、添加分类页面（Categories） 创建分类页面文件 在 source 文件夹下创建 categories 文件夹，新建 index.md：文件路径：source&amp;#x2F;categorie">
+  <meta property="og:url" content="https://www.weite.net/natter/4/">
+  <meta property="og:site_name" content="维特笔记">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="优化我的hexo主题之增加了分类和404错误页面 · 维特笔记">
+  <meta name="twitter:description" content="按照上次的使用AI工具的经验，这次给自己这个小破站增加了两个页面，分别是：分类页面和404错误页面。 一、添加分类页面（Categories） 创建分类页面文件 在 source 文件夹下创建 categories 文件夹，新建 index.md：文件路径：source&amp;#x2F;categorie">
+  
+  
+  <meta property="og:image" content="https://www.weite.net/img/og-image.png">
+  
+
+  <link rel="stylesheet" href="/css/style.css?v=8c38ae3d">
+
+  
+  
+  
+  <link rel="preconnect" href="https://img.weite.net" crossorigin>
+  
+  <link rel="preconnect" href="https://img.vte.cc" crossorigin>
+  
+  <link rel="preconnect" href="https://waline.weite.net" crossorigin>
+  
+  
+<meta name="generator" content="Hexo 8.1.2"></head>
+<body class="is-inner">
+
+
+<header class="site-header" id="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="/" aria-label="维特笔记">
+      <span class="brand-mark">维</span>
+      <span class="brand-text">
+        <strong>维特笔记</strong>
+        <em>记录 · 思考 · 折腾</em>
+      </span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="主导航">
+      
+        <a class="nav-link" href="/">首页</a>
+      
+        <a class="nav-link" href="/archives/">文章</a>
+      
+        <a class="nav-link" href="/portfolio/">作品</a>
+      
+        <a class="nav-link" href="/services/">服务</a>
+      
+        <a class="nav-link" href="/friends/">友链</a>
+      
+        <a class="nav-link" href="/about/">关于</a>
+      
+        <a class="nav-link" href="/contact/">联系</a>
+      
+    </nav>
+
+    <div class="header-actions">
+      
+      <button class="icon-btn js-search-open" type="button" aria-label="搜索">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path></svg>
+      </button>
+      
+      <button class="menu-toggle" type="button" aria-label="打开菜单" aria-expanded="false" id="menu-toggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-nav" id="mobile-nav" aria-hidden="true">
+  <div class="mobile-nav-inner">
+    <nav>
+      
+        <a class="" href="/"><span>首页</span><i>→</i></a>
+      
+        <a class="" href="/archives/"><span>文章</span><i>→</i></a>
+      
+        <a class="" href="/portfolio/"><span>作品</span><i>→</i></a>
+      
+        <a class="" href="/services/"><span>服务</span><i>→</i></a>
+      
+        <a class="" href="/friends/"><span>友链</span><i>→</i></a>
+      
+        <a class="" href="/about/"><span>关于</span><i>→</i></a>
+      
+        <a class="" href="/contact/"><span>联系</span><i>→</i></a>
+      
+    </nav>
+    <div class="mobile-nav-foot">
+      
+        <a href="https://github.com/weitenet" target="_blank" rel="noopener">GitHub</a>
+      
+        <a href="mailto:weite.net@outlook.com" target="_blank" rel="noopener">邮箱</a>
+      
+        <a href="/atom.xml" target="_blank" rel="noopener">RSS</a>
+      
+    </div>
+  </div>
+</div>
+
+<div class="search-layer" id="search-layer" aria-hidden="true">
+  <div class="search-layer-inner">
+    <button class="search-close js-search-close" type="button" aria-label="关闭搜索">×</button>
+    <p class="search-hint">输入关键词，搜索站内文章</p>
+    <div class="search-box">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path></svg>
+      <input type="search" id="search-layer-input" placeholder="例如：Hexo、生活、AI" autocomplete="off">
+    </div>
+    <div class="search-results" id="search-layer-results"></div>
+  </div>
+</div>
+
+
+
+
+<section class="article-hero">
+  <div class="shell">
+    <nav class="crumbs" aria-label="面包屑">
+      <a href="/">首页</a>
+      <span>/</span>
+      
+      <a href="/categories/natter/">natter</a>
+      <span>/</span>
+      
+      <em>正文</em>
+    </nav>
+    <h1 class="article-title">优化我的hexo主题之增加了分类和404错误页面</h1>
+    <div class="article-meta">
+      <time datetime="2025-11-03T12:20:29.000Z">2025年11月03日</time>
+      <span class="dot">·</span>
+      <span>6 分钟阅读</span>
+      <span class="dot">·</span>
+      <span>1554 字</span>
+      
+      <span class="dot">·</span>
+      <span>更新于 2026-11-06</span>
+      
+    </div>
+  </div>
+</section>
+
+<article class="section article-section">
+  <div class="shell article-layout">
+    <div class="article-main">
+      
+
+      <div class="article-content" id="article-content">
+        <p>按照上次的使用AI工具的经验，这次给自己这个小破站增加了两个页面，分别是：分类页面和404错误页面。</p>
+<p>一、添加分类页面（Categories）</p>
+<ol>
+<li>创建分类页面文件</li>
+</ol>
+<p>在 source 文件夹下创建 categories 文件夹，新建 index.md：文件路径：source&#x2F;categories&#x2F;index.md</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs bash">---<br>title: 文章分类<br>layout: categories  <span class="hljs-comment"># 指定分类布局</span><br><span class="hljs-built_in">date</span>: 2025-10-31 12:00:00<br>---<br></code></pre></td></tr></table></figure>
+<ol start="2">
+<li>创建分类页面布局</li>
+</ol>
+<p>在 layout 文件夹下新建 categories.ejs：文件路径：layout&#x2F;categories.ejs</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><code class="hljs bash">&lt;section class=<span class="hljs-string">&quot;archive categories-page&quot;</span>&gt;<br>  &lt;div class=<span class="hljs-string">&quot;archive-title&quot;</span>&gt;<br>    &lt;h1&gt;&lt;%= page.title %&gt;&lt;/h1&gt;<br>  &lt;/div&gt;<br><br>  &lt;% <span class="hljs-keyword">if</span> (site.categories.length &gt; 0) &#123; %&gt;<br>    &lt;% site.categories.each(<span class="hljs-keyword">function</span>(category) &#123; %&gt;<br>      &lt;div class=<span class="hljs-string">&quot;category-item&quot;</span>&gt;<br>        &lt;!-- 分类名称与文章数量 --&gt;<br>        &lt;h2 class=<span class="hljs-string">&quot;category-name&quot;</span>&gt;<br>          &lt;a href=<span class="hljs-string">&quot;&lt;%= category.permalink %&gt;&quot;</span> style=<span class="hljs-string">&quot;color: var(--accent-color);&quot;</span>&gt;<br>            &lt;%= category.name %&gt;<br>            &lt;span class=<span class="hljs-string">&quot;category-count&quot;</span>&gt;（&lt;%= category.posts.length %&gt;篇）&lt;/span&gt;<br>          &lt;/a&gt;<br>        &lt;/h2&gt;<br>        <br>        &lt;!-- 分类下的文章列表 --&gt;<br>        &lt;ul class=<span class="hljs-string">&quot;category-posts&quot;</span>&gt;<br>          &lt;% category.posts.sort(<span class="hljs-string">&#x27;-date&#x27;</span>).each(<span class="hljs-keyword">function</span>(post) &#123; %&gt;<br>            &lt;li class=<span class="hljs-string">&quot;archive-item&quot;</span>&gt;<br>              &lt;span class=<span class="hljs-string">&quot;archive-date&quot;</span>&gt;&lt;%= <span class="hljs-built_in">date</span>(post.date, <span class="hljs-string">&#x27;YYYY-MM-DD&#x27;</span>) %&gt;&lt;/span&gt;<br>              &lt;a href=<span class="hljs-string">&quot;&lt;%= post.permalink %&gt;&quot;</span> class=<span class="hljs-string">&quot;archive-title-link&quot;</span>&gt;&lt;%= post.title %&gt;&lt;/a&gt;<br>            &lt;/li&gt;<br>          &lt;% &#125;) %&gt;<br>        &lt;/ul&gt;<br>      &lt;/div&gt;<br>    &lt;% &#125;) %&gt;<br>  &lt;% &#125; <span class="hljs-keyword">else</span> &#123; %&gt;<br>    &lt;div class=<span class="hljs-string">&quot;no-posts&quot;</span>&gt;<br>      &lt;div class=<span class="hljs-string">&quot;no-posts-inner&quot;</span>&gt;<br>        &lt;i class=<span class="hljs-string">&quot;fa fa-folder-o&quot;</span> style=<span class="hljs-string">&quot;font-size: 2rem; margin-bottom: 1rem;&quot;</span>&gt;&lt;/i&gt;<br>        &lt;p&gt;暂无分类&lt;/p&gt;<br>        &lt;p style=<span class="hljs-string">&quot;font-size: 0.9rem;&quot;</span>&gt;在文章Front-matter中添加 &lt;code&gt;categories: 分类名&lt;/code&gt; 创建分类&lt;/p&gt;<br>      &lt;/div&gt;<br>    &lt;/div&gt;<br>  &lt;% &#125; %&gt;<br>&lt;/section&gt;<br></code></pre></td></tr></table></figure>
+<ol start="3">
+<li>导航栏添加分类链接</li>
+</ol>
+<p>修改 layout&#x2F;_partial&#x2F;header.ejs，在导航菜单中添加分类项：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs bash">&lt;nav class=<span class="hljs-string">&quot;header-menu&quot;</span>&gt;<br>  &lt;ul class=<span class="hljs-string">&quot;menu-list&quot;</span>&gt;<br>    &lt;li class=<span class="hljs-string">&quot;menu-item &lt;%= is_home() ? &#x27;active&#x27; : &#x27;&#x27; %&gt;&quot;</span>&gt;<br>      &lt;a href=<span class="hljs-string">&quot;&lt;%= url_for(&#x27;/&#x27;) %&gt;&quot;</span>&gt;首页&lt;/a&gt;<br>    &lt;/li&gt;<br>    &lt;li class=<span class="hljs-string">&quot;menu-item &lt;%= is_archive() ? &#x27;active&#x27; : &#x27;&#x27; %&gt;&quot;</span>&gt;<br>      &lt;a href=<span class="hljs-string">&quot;&lt;%= url_for(&#x27;/archives&#x27;) %&gt;&quot;</span>&gt;归档&lt;/a&gt;<br>    &lt;/li&gt;<br>    &lt;!-- 新增分类导航项 --&gt;<br>    &lt;li class=<span class="hljs-string">&quot;menu-item &lt;%= is_page(&#x27;categories&#x27;) ? &#x27;active&#x27; : &#x27;&#x27; %&gt;&quot;</span>&gt;<br>      &lt;a href=<span class="hljs-string">&quot;&lt;%= url_for(&#x27;/categories&#x27;) %&gt;&quot;</span>&gt;分类&lt;/a&gt;<br>    &lt;/li&gt;<br>    &lt;li class=<span class="hljs-string">&quot;menu-item &lt;%= is_tag() ? &#x27;active&#x27; : &#x27;&#x27; %&gt;&quot;</span>&gt;<br>      &lt;a href=<span class="hljs-string">&quot;&lt;%= url_for(&#x27;/tags&#x27;) %&gt;&quot;</span>&gt;标签&lt;/a&gt;<br>    &lt;/li&gt;<br>    &lt;li class=<span class="hljs-string">&quot;menu-item &lt;%= is_page(&#x27;about&#x27;) ? &#x27;active&#x27; : &#x27;&#x27; %&gt;&quot;</span>&gt;<br>      &lt;a href=<span class="hljs-string">&quot;&lt;%= url_for(&#x27;/about&#x27;) %&gt;&quot;</span>&gt;关于&lt;/a&gt;<br>    &lt;/li&gt;<br>  &lt;/ul&gt;<br>&lt;/nav&gt;<br></code></pre></td></tr></table></figure>
+<ol start="4">
+<li>添加分类页面样式（style.css 补充）</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-comment">/* ==================================================</span><br><span class="hljs-comment">   分类页面样式</span><br><span class="hljs-comment">================================================== */</span><br><span class="hljs-selector-class">.categories-page</span> &#123;<br>  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--white);<br>  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">8px</span>;<br>  <span class="hljs-attribute">padding</span>: <span class="hljs-number">2rem</span>;<br>  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-built_in">var</span>(--shadow);<br>  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">2rem</span>;<br>  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">800px</span>;<br>  <span class="hljs-attribute">margin-left</span>: auto;<br>  <span class="hljs-attribute">margin-right</span>: auto;<br>&#125;<br><br><span class="hljs-selector-class">.category-item</span> &#123;<br>  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">2rem</span>;<br>  <span class="hljs-attribute">padding-bottom</span>: <span class="hljs-number">1rem</span>;<br>  <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--border-color);<br>&#125;<br><br><span class="hljs-selector-class">.category-item</span><span class="hljs-selector-pseudo">:last-child</span> &#123;<br>  <span class="hljs-attribute">border-bottom</span>: none;<br>&#125;<br><br><span class="hljs-selector-class">.category-name</span> &#123;<br>  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.4rem</span>;<br>  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">1rem</span>;<br>  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--accent-color);<br>&#125;<br><br><span class="hljs-selector-class">.category-count</span> &#123;<br>  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">0.9rem</span>;<br>  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--secondary-color);<br>  <span class="hljs-attribute">font-weight</span>: normal;<br>&#125;<br><br><span class="hljs-selector-class">.category-posts</span> &#123;<br>  <span class="hljs-attribute">list-style</span>: none;<br>  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;<br>&#125;<br><br><span class="hljs-comment">/* 复用归档页文章项样式，保持一致 */</span><br><span class="hljs-selector-class">.category-posts</span> <span class="hljs-selector-class">.archive-item</span> &#123;<br>  <span class="hljs-attribute">display</span>: flex;<br>  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.6rem</span> <span class="hljs-number">0</span>;<br>  <span class="hljs-attribute">border-bottom</span>: <span class="hljs-number">1px</span> dashed <span class="hljs-built_in">var</span>(--border-color);<br>&#125;<br><br><span class="hljs-selector-class">.category-posts</span> <span class="hljs-selector-class">.archive-item</span><span class="hljs-selector-pseudo">:hover</span> &#123;<br>  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--light-gray);<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>二、添加 404 错误页面</p>
+<ol>
+<li>创建 404 页面文件</li>
+</ol>
+<p>在 source 根目录下新建 404.html（直接放在 source 下，无需文件夹）：</p>
+<p>文件路径：source&#x2F;404.html</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-meta">&lt;!DOCTYPE <span class="hljs-keyword">html</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">&quot;&lt;%= config.language || &#x27;zh-CN&#x27; %&gt;&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">&quot;UTF-8&quot;</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">name</span>=<span class="hljs-string">&quot;viewport&quot;</span> <span class="hljs-attr">content</span>=<span class="hljs-string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>404 - 页面未找到<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&quot;</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">link</span> <span class="hljs-attr">rel</span>=<span class="hljs-string">&quot;stylesheet&quot;</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;/css/style.css&quot;</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>  <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;container&quot;</span>&gt;</span><br>    <span class="hljs-comment">&lt;!-- 导航栏 --&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span><br>      &lt;%- include(&#x27;_partial/header&#x27;) %&gt;<br>    <span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span><br><br>    <span class="hljs-comment">&lt;!-- 404内容区 --&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;four-zero-four&quot;</span>&gt;</span><br>      <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;four-zero-four-inner&quot;</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;error-code&quot;</span>&gt;</span>404<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;error-message&quot;</span>&gt;</span>页面好像迷路了...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;error-tips&quot;</span>&gt;</span><br>          <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>你访问的页面不存在或已被移动<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br>          <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>建议检查URL是否正确，或返回首页重新导航<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;&lt;%= url_for(&#x27;/&#x27;) %&gt;&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;back-home-btn&quot;</span>&gt;</span><br>          <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-arrow-left&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span> 返回首页<br>        <span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><br>      <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span><br><br>    <span class="hljs-comment">&lt;!-- 底部 --&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">footer</span>&gt;</span><br>      &lt;%- include(&#x27;_partial/footer&#x27;) %&gt;<br>    <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span><br>  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span><br></code></pre></td></tr></table></figure>
+<ol start="2">
+<li>添加 404 页面样式（style.css 补充）</li>
+</ol>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-comment">/* ==================================================</span><br><span class="hljs-comment">   404页面样式</span><br><span class="hljs-comment">================================================== */</span><br><span class="hljs-selector-class">.four-zero-four</span> &#123;<br>  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--white);<br>  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">8px</span>;<br>  <span class="hljs-attribute">padding</span>: <span class="hljs-number">4rem</span> <span class="hljs-number">2rem</span>;<br>  <span class="hljs-attribute">box-shadow</span>: <span class="hljs-built_in">var</span>(--shadow);<br>  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">2rem</span>;<br>  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">800px</span>;<br>  <span class="hljs-attribute">margin-left</span>: auto;<br>  <span class="hljs-attribute">margin-right</span>: auto;<br>  <span class="hljs-attribute">text-align</span>: center;<br>&#125;<br><br><span class="hljs-selector-class">.four-zero-four-inner</span> &#123;<br>  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">500px</span>;<br>  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span> auto;<br>&#125;<br><br><span class="hljs-selector-class">.error-code</span> &#123;<br>  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">6rem</span>;<br>  <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">700</span>;<br>  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--accent-color);<br>  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">1rem</span>;<br>  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1</span>;<br>&#125;<br><br><span class="hljs-selector-class">.error-message</span> &#123;<br>  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.8rem</span>;<br>  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--primary-color);<br>  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">1.5rem</span>;<br>&#125;<br><br><span class="hljs-selector-class">.error-tips</span> &#123;<br>  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--secondary-color);<br>  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1rem</span>;<br>  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">2rem</span>;<br>  <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.7</span>;<br>&#125;<br><br><span class="hljs-selector-class">.back-home-btn</span> &#123;<br>  <span class="hljs-attribute">display</span>: inline-block;<br>  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.8rem</span> <span class="hljs-number">1.6rem</span>;<br>  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--accent-color);<br>  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--white);<br>  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">4px</span>;<br>  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1rem</span>;<br>  <span class="hljs-attribute">transition</span>: background-color <span class="hljs-number">0.2s</span> ease;<br>&#125;<br><br><span class="hljs-selector-class">.back-home-btn</span><span class="hljs-selector-pseudo">:hover</span> &#123;<br>  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--accent-hover);<br>  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--white);<br>&#125;<br><br><span class="hljs-comment">/* 响应式调整 */</span><br><span class="hljs-keyword">@media</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">768px</span>) &#123;<br>  <span class="hljs-selector-class">.four-zero-four</span> &#123;<br>    <span class="hljs-attribute">padding</span>: <span class="hljs-number">3rem</span> <span class="hljs-number">1.5rem</span>;<br>  &#125;<br>  <br>  <span class="hljs-selector-class">.error-code</span> &#123;<br>    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">4.5rem</span>;<br>  &#125;<br>  <br>  <span class="hljs-selector-class">.error-message</span> &#123;<br>    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.5rem</span>;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p>到现在就成功的增加了这两个页面，当然以上的代码只适合我自己使用，对其他的任何人都是无效的。</p>
+<p>不过我在测试404错误页面的时候，上面的404错误页代码显示是不正常的，我也不知道是哪里出的问题。</p>
+<p>最后我把style.css文件里的404错误代码删除之后正常了！虽然现在看起来依然是一个怪怪的感觉。但是我在测试的时候，现在是正常的显示了，不像我一开始测试的时候出现的一堆乱码了。😄</p>
+<p>现在先记录一下，免得以后自己在分不清楚那个是那个。😄</p>
+
+      </div>
+
+      
+      <div class="article-tags">
+        <span class="label">标签</span>
+        
+        <a href="/tags/%E5%8D%9A%E5%AE%A2/"># 博客</a>
+        
+        <a href="/tags/hexo/"># hexo</a>
+        
+      </div>
+      
+
+      
+      <div class="copyright-box">
+        <p><strong>版权声明</strong>：本文采用
+          <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">BY-NC-SA 4.0</a>
+          许可协议，转载请注明来自 <a href="/">维特笔记</a>。
+        </p>
+      </div>
+      
+
+      
+      <div class="share-row">
+        <span class="label">分享</span>
+        <a href="https://service.weibo.com/share/share.php?url=https%3A%2F%2Fwww.weite.net%2Fnatter%2F4%2F&title=%E4%BC%98%E5%8C%96%E6%88%91%E7%9A%84hexo%E4%B8%BB%E9%A2%98%E4%B9%8B%E5%A2%9E%E5%8A%A0%E4%BA%86%E5%88%86%E7%B1%BB%E5%92%8C404%E9%94%99%E8%AF%AF%E9%A1%B5%E9%9D%A2" target="_blank" rel="noopener">微博</a>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.weite.net%2Fnatter%2F4%2F&text=%E4%BC%98%E5%8C%96%E6%88%91%E7%9A%84hexo%E4%B8%BB%E9%A2%98%E4%B9%8B%E5%A2%9E%E5%8A%A0%E4%BA%86%E5%88%86%E7%B1%BB%E5%92%8C404%E9%94%99%E8%AF%AF%E9%A1%B5%E9%9D%A2" target="_blank" rel="noopener">X</a>
+        <button type="button" class="js-copy-link" data-url="https://www.weite.net/natter/4/">复制链接</button>
+      </div>
+      
+
+      
+      <div class="author-box">
+        <img src="/img/avatar.svg" alt="维特笔记" loading="lazy" decoding="async">
+        <div>
+          <h3>维特笔记</h3>
+          <p>一个做事三分钟热度、却把博客坚持了一年的人。</p>
+          <div class="author-links">
+            <a href="/about/">关于我</a>
+            <a href="/archives/">全部文章</a>
+          </div>
+        </div>
+      </div>
+      
+
+      <nav class="post-nav">
+        
+        <a class="post-nav-item prev" href="/natter/5/">
+          <span>← 上一篇</span>
+          <strong>这才是真正的女装大佬</strong>
+        </a>
+        
+
+        
+        <a class="post-nav-item next" href="/natter/3/">
+          <span>下一篇 →</span>
+          <strong>我用AI给自己写了一个hexo主题</strong>
+        </a>
+        
+      </nav>
+
+      
+      
+<section class="comments-area" id="comments">
+  <div class="section-line-head">
+    <h2>评论</h2>
+    <p>说点什么，让我知道你来过</p>
+  </div>
+  <div id="waline-container" class="waline-container"></div>
+</section>
+<script>
+(function () {
+  var box = document.getElementById('waline-container');
+  if (!box) return;
+  var loaded = false;
+  function loadWaline() {
+    if (loaded) return;
+    loaded = true;
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = '/waline/waline.css?v=0033abb4';
+    document.head.appendChild(link);
+    var s = document.createElement('script');
+    s.type = 'module';
+    s.textContent = [
+      "import * as Waline from '/waline/waline.js?v=88d7da73';",
+      "Waline.init({",
+      "  el: '#waline-container',",
+      "  serverURL: 'https://waline.weite.net',",
+      "  lang: 'zh-CN',",
+      "  placeholder: '说点什么吧，欢迎交流…',",
+      "  requiredMeta: [\"nick\",\"mail\"], ",
+      "  login: 'enable',",
+      "  pageSize: 10,",
+      "  pageview: false,",
+      "  comment: true,",
+      "  dark: false,",
+      "  search: false",
+      "});"
+    ].join('\n');
+    document.body.appendChild(s);
+  }
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { io.unobserve(e.target); loadWaline(); }
+      });
+    }, { rootMargin: '200px' });
+    io.observe(box);
+  } else {
+    loadWaline();
+  }
+})();
+</script>
+
+
+      
+    </div>
+
+    <aside class="article-side">
+      
+
+      <div class="side-block side-author">
+        <img src="/img/avatar.svg" alt="维特笔记" loading="lazy" decoding="async">
+        <h4>维特笔记</h4>
+        <p>一个做事三分钟热度、却把博客坚持了一年的人。</p>
+        <div class="side-social">
+          
+          <a href="https://github.com/weitenet" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.17c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+          </a>
+          
+          <a href="mailto:weite.net@outlook.com" target="_blank" rel="noopener" aria-label="邮箱">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm10 7.6L3.6 5.4 3 6l9 7 9-7-.6-.6L12 11.6z"/></svg>
+          </a>
+          
+          <a href="/atom.xml" target="_blank" rel="noopener" aria-label="RSS">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17a3 3 0 1 1 0 6 3 3 0 0 1 0-6zM1 8.6v3.1A11.3 11.3 0 0 1 12.3 23h3.1C15.4 14.6 9.4 8.6 1 8.6zM1 1v3.1C11.3 4.1 19.9 12.7 19.9 23H23C23 10.6 13.4 1 1 1z"/></svg>
+          </a>
+          
+        </div>
+      </div>
+
+      
+      <div class="side-block">
+        <h4 class="side-title">最近文章</h4>
+        <ul class="side-posts">
+          
+          <li>
+            <a href="/natter/28/">聊聊我最近做了什么</a>
+            <time>2026-11-04</time>
+          </li>
+          
+          <li>
+            <a href="/natter/27/">喝酒后的胡言乱语</a>
+            <time>2026-10-25</time>
+          </li>
+          
+          <li>
+            <a href="/natter/26/">使用WorkBuddy写hexo主题确实比较安逸</a>
+            <time>2026-10-19</time>
+          </li>
+          
+          <li>
+            <a href="/vitepress/25/">用豆包给我电脑里安装了一个VitePress</a>
+            <time>2026-10-14</time>
+          </li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <div class="side-block">
+        <h4 class="side-title">分类</h4>
+        <ul class="side-cats">
+          
+          <li><a href="/categories/natter/"><span>natter</span><em></em></a></li>
+          
+          <li><a href="/categories/vitepress/"><span>vitepress</span><em></em></a></li>
+          
+        </ul>
+      </div>
+      
+
+      
+      <div class="side-block">
+        <h4 class="side-title">标签</h4>
+        <div class="side-tags">
+          
+          <a href="/tags/%E9%82%AF%E9%83%B8%E5%8D%9A%E7%89%A9%E9%A6%86/">邯郸博物馆</a>
+          
+          <a href="/tags/EdgeOne/">EdgeOne</a>
+          
+          <a href="/tags/%E5%8D%9A%E5%AE%A2/">博客</a>
+          
+          <a href="/tags/hexo/">hexo</a>
+          
+          <a href="/tags/%E7%83%9F%E8%8A%B1/">烟花</a>
+          
+          <a href="/tags/%E8%87%AA%E9%A9%BE/">自驾</a>
+          
+          <a href="/tags/vitepress/">vitepress</a>
+          
+          <a href="/tags/%E5%B0%8F%E7%A0%B4%E7%AB%99/">小破站</a>
+          
+          <a href="/tags/%E8%B1%86%E5%8C%85/">豆包</a>
+          
+          <a href="/tags/hexo%E4%B8%BB%E9%A2%98/">hexo主题</a>
+          
+          <a href="/tags/vercel/">vercel</a>
+          
+          <a href="/tags/%E5%9F%9F%E5%90%8D/">域名</a>
+          
+          <a href="/tags/%E5%9B%BE%E5%BA%8A/">图床</a>
+          
+          <a href="/tags/%E9%9F%B3%E4%B9%90/">音乐</a>
+          
+        </div>
+      </div>
+      
+    </aside>
+  </div>
+</article>
+
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="footer-logo" href="/">
+          <span class="brand-mark">维</span>
+          <span>维特笔记</span>
+        </a>
+        <p class="footer-desc">一个普通 80 后的数字自留地，记录技术、生活与一些没头没尾的念头。</p>
+        <div class="footer-social">
+          
+          <a href="https://github.com/weitenet" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2.17c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.79 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.41-5.25 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>
+          </a>
+          
+          <a href="mailto:weite.net@outlook.com" target="_blank" rel="noopener" aria-label="邮箱">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 4h20a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V5a1 1 0 0 1 1-1zm10 7.6L3.6 5.4 3 6l9 7 9-7-.6-.6L12 11.6z"/></svg>
+          </a>
+          
+          <a href="/atom.xml" target="_blank" rel="noopener" aria-label="RSS">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17a3 3 0 1 1 0 6 3 3 0 0 1 0-6zM1 8.6v3.1A11.3 11.3 0 0 1 12.3 23h3.1C15.4 14.6 9.4 8.6 1 8.6zM1 1v3.1C11.3 4.1 19.9 12.7 19.9 23H23C23 10.6 13.4 1 1 1z"/></svg>
+          </a>
+          
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>导航</h4>
+        <ul>
+          
+          <li><a href="/">首页</a></li>
+          
+          <li><a href="/archives/">文章</a></li>
+          
+          <li><a href="/portfolio/">作品</a></li>
+          
+          <li><a href="/services/">服务</a></li>
+          
+          <li><a href="/friends/">友链</a></li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>浏览</h4>
+        <ul>
+          <li><a href="/archives/">文章归档</a></li>
+          <li><a href="/categories/">全部分类</a></li>
+          <li><a href="/tags/">全部标签</a></li>
+          <li><a href="/search/">搜索文章</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>保持联系</h4>
+        <ul>
+          <li><a href="/contact/">写封邮件</a></li>
+          
+          <li><a href="/atom.xml" target="_blank" rel="noopener">RSS</a></li>
+          
+          <li><a href="/sitemap.xml" target="_blank" rel="noopener">站点地图</a></li>
+          
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025–2026 维特笔记. 保留所有权利。</p>
+      <p class="footer-meta">
+        
+        <span>由 <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> 驱动</span>
+        <span class="dot">·</span>
+        <span>主题 Smarto</span>
+        
+        <span class="dot">·</span>
+        <a href="https://cloud.umami.is/analytics/us/share/XcqjHL9GTSU4ZtBl" target="_blank" rel="noopener">访问统计</a>
+        
+      </p>
+    </div>
+  </div>
+</footer>
+
+<button class="back-top" id="back-top" type="button" aria-label="回到顶部">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"></path></svg>
+</button>
+
+<div class="read-progress" id="read-progress"></div>
+
+<script>window.__ROOT__ = '/';</script>
+
+
+<script defer src="https://cloud.umami.is/script.js" data-website-id="cb9e51cb-83df-4277-b9ec-7bb1b8359e6b"></script>
+
+<script src="/js/main.js?v=1e6a76d1" defer></script>
+
+<script type="speculationrules">
+{"prerender":[{"where":{"href_matches":"/*"},"eagerness":"moderate"}]}
+</script>
+
+</body>
+</html>
+
